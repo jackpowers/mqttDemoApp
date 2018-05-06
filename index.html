@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Mqtt Temperature Demo</title>
+</head>
+
+<body>
+  <div>
+    <iframe src="http://test.mosquitto.org/gauge/" height="410" width="430"></iframe>
+  </div>
+  <div>
+    <form>
+      Select a Temperature Input:
+      <input type="number" id="myNumber" step="0.25" min="-20" max="50" defaultValue="20">
+    </form>
+  </div>
+  <div>
+    Publish a Temperature and Subscribe to Temperature Topic:
+    <button onclick="mqttConnect()">Pub/Sub</button>
+  </div>
+  <div>
+    Test for Publication Success:
+    <button onclick="mqttTest()">Test</button>
+  </div>
+  <div id="result">
+    <br/>
+  </div>
+  <div>
+    <div>
+      Temperature Topic Display
+    </div>
+    <form>
+      <textarea id="pub_data_display" wrap="on" cols="70" style="overflow-y:scroll;outline: none; height: 200px"></textarea>
+    </form>
+  </div>
+  <script src="mqtt.js"></script>
+
+
+</body>
+
+</html>
